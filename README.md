@@ -2,8 +2,6 @@
 
 使用 C++ 和 Qt 开发的两个学习项目：一个简单的计算器和一个照片显示器。旨在熟悉 Qt 框架、CMake 构建流程以及跨平台 GUI 应用开发。
 
-## 项目结构 🗂️
-
 
 ## 项目一：Calculator_Qt 🧮
 
@@ -28,7 +26,7 @@ make
 ./CalculatorApp
 ```
 
-## 项目二：brotherImages_Qt 🧮
+## 项目二：brotherImages_Qt 📸
 
 一个管理相册的工具，支持存储删除照片以及浏览。
 
