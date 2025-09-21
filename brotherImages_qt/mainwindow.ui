@@ -17,10 +17,10 @@
    <widget class="QLabel" name="showPhoto_label">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>130</y>
+      <x>40</x>
+      <y>220</y>
       <width>341</width>
-      <height>371</height>
+      <height>321</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -33,52 +33,21 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="loadbotton">
+   <widget class="QPushButton" name="returnbotton">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>70</y>
-      <width>93</width>
-      <height>28</height>
+      <x>640</x>
+      <y>497</y>
+      <width>151</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">rgb:(85, 0, 255)；</string>
+     <string notr="true">font: 16pt &quot;Microsoft YaHei UI&quot;;
+font: 9pt &quot;Microsoft YaHei UI&quot;;</string>
     </property>
     <property name="text">
-     <string>加载</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_prev">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>70</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">rgb:(85, 0, 255)；</string>
-    </property>
-    <property name="text">
-     <string>上一张</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_next">
-    <property name="geometry">
-     <rect>
-      <x>460</x>
-      <y>70</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">rgb:(85, 0, 255)；</string>
-    </property>
-    <property name="text">
-     <string>下一张</string>
+     <string>主菜单</string>
     </property>
    </widget>
    <widget class="QWidget" name="">
@@ -86,23 +55,62 @@
      <rect>
       <x>40</x>
       <y>70</y>
-      <width>316</width>
-      <height>27</height>
+      <width>620</width>
+      <height>32</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;输入相册路径：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;输入相册路径：&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="loadbotton">
+         <property name="styleSheet">
+          <string notr="true">rgb:(85, 0, 255)；
+font: 700 9pt &quot;Microsoft YaHei UI&quot;;</string>
+         </property>
+         <property name="text">
+          <string>加载</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="photopath_lineEdit"/>
+       </item>
+      </layout>
      </item>
      <item>
-      <widget class="QLineEdit" name="photopath_lineEdit"/>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="btn_prev">
+         <property name="styleSheet">
+          <string notr="true">rgb:(85, 0, 255)；</string>
+         </property>
+         <property name="text">
+          <string>上一张</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_next">
+         <property name="styleSheet">
+          <string notr="true">rgb:(85, 0, 255)；</string>
+         </property>
+         <property name="text">
+          <string>下一张</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </widget>

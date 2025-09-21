@@ -62,3 +62,38 @@ void MainWindow::on_btn_next_clicked() {
     currentIndex = (currentIndex + 1) % imageFiles.size();
     showImage(currentIndex);
 }
+
+// void MainWindow::returnToStart()
+// {
+//     // mainwindow.cpp
+//     auto *backButton = new QPushButton("返回首页", this);
+//     ui->addWidget(backButton);
+//     connect(backButton, &QPushButton::clicked, this, &MainWindow::returnToStart);
+// }
+
+void MainWindow::onAddPhotoClicked() {
+    QString selectedYear = yearCombo->currentText();
+    QString photoPath = QFileDialog::getOpenFileName(this, "选择照片", "", "Images (*.png *.jpg *.jpeg)");
+
+    if (photoPath.isEmpty()) return;
+
+    QDir targetDir(QDir::currentPath() + "/photos/" + selectedYear);
+    if (!targetDir.exists()) {
+        QDir().mkpath(targetDir.path());
+    }
+
+    QFileInfo fileInfo(photoPath);
+    QString targetPath = targetDir.filePath(fileInfo.fileName());
+
+    if (QFile::copy(photoPath, targetPath)) {
+        QMessageBox::information(this, "成功", "照片已保存到 " + targetPath);
+    } else {
+        QMessageBox::warning(this, "失败", "无法保存照片");
+    }
+}
+
+void MainWindow::on_returnbotton_clicked()
+{
+    connect(ui->returnbotton, &QPushButton::clicked, this, &MainWindow::returnToStart);
+}
+

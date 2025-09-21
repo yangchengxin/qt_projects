@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include <QStringList>
 #include <QPixmap>
+#include <QComboBox>
+#include <QPushButton>
+#include <QFileDialog>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,10 +19,21 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+signals:
+    // 返回主菜单
+    void returnToStart();
+
+
+public slots:
+    void on_returnbotton_clicked();
+
 private slots:
     void on_loadbotton_clicked();
     void on_btn_prev_clicked();
     void on_btn_next_clicked();
+
+    // 添加相片
+    void onAddPhotoClicked();
 
 private:
     Ui::MainWindow *ui;
@@ -27,5 +41,9 @@ private:
     int currentIndex = 0;
 
     void showImage(int index);
+
+    // 添加相片
+    QComboBox *yearCombo;
+    QPushButton *addPhotoButton;
 };
 #endif // MAINWINDOW_H

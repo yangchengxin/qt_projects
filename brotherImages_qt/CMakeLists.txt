@@ -23,6 +23,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(brotherImages_qt
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        startwindow.h
+        startwindow.cpp
+        mangerwindow.h
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET brotherImages_qt APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
