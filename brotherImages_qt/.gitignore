@@ -1,0 +1,66 @@
+# === Qt Build Artifacts ===
+*.moc
+*.o
+*.obj
+*.so
+*.so.*
+*.dll
+*.exe
+*.a
+*.prl
+*.app
+*.qm
+*.res
+*.rc
+*.debug
+Makefile*
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+
+# === Qt Creator & IDE Files ===
+*.pro.user*
+*.qbs.user*
+CMakeLists.txt.user*
+.qmake.cache
+.qmake.stash
+*.autosave
+*.sln
+*.vcxproj
+*vcxproj.*.*.user
+*.ncb
+*.sdf
+*.opensdf
+*.ilk
+*.pdb
+*.idb
+*.suo
+*.vcproj
+*vcproj.*.*.user
+
+# === Build Directories ===
+/build/
+/build-*/
+/.moc/
+/.obj/
+/.pch/
+/.rcc/
+/.uic/
+
+# === Editor Temp Files ===
+*~
+.#*
+*.*#
+.directory
+.DS_Store
+Thumbs.db
+*.flc
+.*.swp
+
+# === Python Bytecode ===
+*.pyc
+
+# === Git Tags and Core Dumps ===
+tags
+core
+!core/
